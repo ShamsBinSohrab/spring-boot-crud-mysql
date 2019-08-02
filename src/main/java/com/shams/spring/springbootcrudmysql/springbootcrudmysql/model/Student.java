@@ -64,4 +64,16 @@ public class Student {
     public void setAddress(Address address) {
         this.address = address;
     }
+
+    public String getFullName() {
+        return String.join(" ", this.firstName, this.lastName);
+    }
+
+    public void validate() throws Exception{
+        if (this.firstName.isEmpty() && this.lastName.isEmpty())
+            throw new Exception("Name can not be empty");
+
+        if (this.mobileNumber.length() > 13 || this.mobileNumber.length() < 11)
+            throw new Exception("Invalid mobile number");
+    }
 }

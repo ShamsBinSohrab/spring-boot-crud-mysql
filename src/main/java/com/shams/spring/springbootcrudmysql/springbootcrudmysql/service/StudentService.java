@@ -18,6 +18,15 @@ public class StudentService {
     }
 
     public Student save(Student student) {
-        return studentRepository.save(student);
+        try {
+            student.validate();
+            studentRepository.save(student);
+        }
+        catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        finally {
+            return student;
+        }
     }
 }

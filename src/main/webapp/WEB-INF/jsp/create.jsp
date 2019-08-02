@@ -12,8 +12,12 @@
     <c:form method="post" action="create" modelAttribute="student">
         <c:label path="firstName">First Name:</c:label>
         <c:input path="firstName"/>
+        <br/>
         <c:label path="lastName">Last Name:</c:label>
         <c:input path="lastName"/>
+        <br/>
+        <c:label path="mobileNumber">Mobile Number:</c:label>
+        <c:input path="mobileNumber"/>
         <input type="submit"/>
     </c:form>
 </body>
